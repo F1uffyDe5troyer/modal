@@ -1,17 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>{{ title }}</h1>
+  <Modal :header="header" :text="text" theme="promotion"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Modal from "./components/Modal.vue";
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Modal
+  },
+  data() {
+   return {
+     title: 'Young Grasshopper',
+     header: 'Sign up to win a prize',
+     text: 'Come get your 50% discount now whilst stocks last!',
+   }
+  },
+methods: {
   }
 }
+
 </script>
 
 <style>
